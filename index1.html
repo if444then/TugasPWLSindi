@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://localhost/perpustakaan/app/admin/dashboard -->
+<html style="height: auto; min-height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dashboard Admin | Perpustakaan SMAN Pati</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="./index1_files/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./index1_files/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="./index1_files/ionicons.min.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="./index1_files/bootstrap-datepicker.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./index1_files/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="./index1_files/_all-skins.min.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="./index1_files/bootstrap3-wysihtml5.min.css">
+    <!-- -->
+    <link rel="stylesheet" href="./index1_files/dataTables.bootstrap.min.css">
+    <!-- Icon -->
+    <link rel="icon" type="icon" href="./index1_files/icon-app.png">
+    <!-- Custom -->
+    <link rel="stylesheet" href="./index1_files/custom.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="./index1_files/toastr.min.css">
+    <!-- -->
+    <style>
+        .theme-loader {
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            position: fixed;
+            z-index: 999999;
+            top: 0;
+        }
+
+        .theme-loader .ball-scale {
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            margin: -25px 0 0 -25px;
+        }
+
+        .theme-loader .ball-scale .contain {
+            height: 100%;
+            width: 100%;
+        }
+
+        .theme-loader .ball-scale .contain .ring {
+            display: none;
+        }
+
+        .theme-loader .ball-scale .contain .ring:first-child {
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            padding: 10px;
+            border: 3px solid transparent;
+            border-left-color: #2b99f2;
+            border-right-color: #2b99f2;
+            -webkit-animation: round-rotate 1.5s ease-in-out infinite;
+            animation: round-rotate 1.5s ease-in-out infinite;
+        }
+
+        .theme-loader .ball-scale .contain .ring:first-child .frame {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-left-color: #65a6db;
+            border-right-color: #65a6db;
+            -webkit-animation: round-rotate 1.5s ease-in-out infinite;
+            animation: round-rotate 1.5s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes round-rotate {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes round-rotate {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body class="skin-blue sidebar-mini" style="font-family: Quicksand, sans-serif; height: auto; min-height: 100%;">
+
+    <!-- Pre-loader start -->
+
+    <!-- Pre-loader end -->
+    <div class="wrapper" style="height: auto; min-height: 100%;">
+
+        <header class="main-header active">
+    <!-- Logo -->
+    <a href="http://localhost/perpustakaan/app/admin/dashboard" class="logo" style="font-family: &#39;Quicksand&#39;, sans-serif">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><i class="fa fa-book"></i></span>
+        <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>PERPUSTAKAAN</b> <i class="fa fa-book"></i></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="http://localhost/perpustakaan/assets/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <a style="cursor: pointer;" class="dropdown-toggle" data-toggle="dropdown" id="badgePesan"><i class="fa fa-envelope-o"></i></a>
+                    <ul class="dropdown-menu" id="Pesan"><li class="header">Kamu tidak memiliki pesan baru</li><li><ul class="menu"><li></li></ul></li><li class="footer"><a href="http://localhost/perpustakaan/app/admin/pesan">Lihat semua pesan</a></li></ul>
+                </li>
+                <!-- Notifications: style can be found in dropdown.less -->
+                <li class="dropdown notifications-menu">
+                    <a style="cursor: pointer;" class="dropdown-toggle" data-toggle="dropdown" id="badgeNotif"><i class="fa fa-bell-o"></i><span class="label label-danger">2</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="header" id="headerNotif"><li class="header">Kamu memiliki 2 pemberitahuan</li></li><li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu" id="isiNotif"><li><a href="http://localhost/perpustakaan/app/admin/pages/function/Pemberitahuan.php?aksi=edit&amp;id_pemberitahuan=1"><i class="fa fa-exchange"></i> #Reza  Saputra Telah meminjam Buku</a></li><li><a href="http://localhost/perpustakaan/app/admin/pages/function/Pemberitahuan.php?aksi=edit&amp;id_pemberitahuan=2"><i class="fa fa-repeat"></i> #Reza  Saputra Telah mengembalikan Buku</a></li></ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu">
+                    <a href="http://localhost/perpustakaan/app/admin/dashboard#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="./index1_files/avatar01.png" class="user-image" alt="User Image">
+                        <span class="hidden-xs">Administrator                            <i class="fa fa-check-circle" title="Akun Terverifikasi" data-toggle="tooltip" data-placement="bottom"></i>                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img src="./index1_files/avatar01.png" class="img-circle" alt="User Image">
+
+                            <p>
+                                <!-- -->
+                                Administrator
+                                <i class="fa fa-check-circle" title="Akun Terverifikasi" data-toggle="tooltip" data-placement="bottom"></i>                                                                    <small>Tanggal Bergabung : 04-05-2021</small>
+                                    <small>Terakhir Login : 10-07-2024 ( 11:48:39 )</small>
+                                                            </p>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <a href="http://localhost/perpustakaan/app/admin/dashboard#Logout" data-toggle="modal" data-target="#modalLogoutConfirm" class="btn btn-default btn-flat">Keluar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Pesan -->
+<script>
+    var refreshId = setInterval(function() {
+        $('#badgePesan').load('./pages/function/Pesan.php?aksi=badgePesan');
+    }, 500);
+</script>
+<script>
+    var refreshId = setInterval(function() {
+        $('#Pesan').load('./pages/function/Pesan.php?aksi=Pesan');
+    }, 500);
+</script>
+<!-- Notif -->
+<script>
+    var refreshId = setInterval(function() {
+        $('#badgeNotif').load('./pages/function/Pemberitahuan.php?aksi=badgeNotif');
+    }, 500);
+</script>
+<script>
+    var refreshId = setInterval(function() {
+        $('#headerNotif').load('./pages/function/Pemberitahuan.php?aksi=headerNotif');
+    }, 500);
+</script>
+<script>
+    var refreshId = setInterval(function() {
+        $('#isiNotif').load('./pages/function/Pemberitahuan.php?aksi=isiNotif');
+    }, 500);
+</script>        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="height: auto;">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="./index1_files/avatar01.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>Administrator</p>
+                
+                <a><i class="fa fa-check-circle text-info"></i> Akun Terverifikasi</a>            </div>
+        </div>
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu tree" data-widget="tree">
+            <li class="header">MAIN MENU</li>
+            <li class="active"><a href="http://localhost/perpustakaan/app/admin/dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+            <li class="treeview">
+                <a href="http://localhost/perpustakaan/app/admin/dashboard#">
+                    <i class="fa fa-folder"></i>
+                    <span>Master Data</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="http://localhost/perpustakaan/app/admin/anggota"><i class="fa fa-circle-o"></i> Data Anggota</a></li>
+                    <li><a href="http://localhost/perpustakaan/app/admin/penerbit"><i class="fa fa-circle-o"></i> Data Penerbit</a></li>
+                    <li><a href="http://localhost/perpustakaan/app/admin/administrator"><i class="fa fa-circle-o"></i> Administrator</a></li>
+                    <li><a href="http://localhost/perpustakaan/app/admin/data-peminjaman"><i class="fa fa-circle-o"></i> Data Peminjaman</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="http://localhost/perpustakaan/app/admin/dashboard#">
+                    <i class="fa fa-book"></i>
+                    <span>Katalog Buku</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="http://localhost/perpustakaan/app/admin/data-buku"><i class="fa fa-circle-o"></i> Data Buku</a></li>
+                    <li><a href="http://localhost/perpustakaan/app/admin/kategori-buku"><i class="fa fa-circle-o"></i> Kategori Buku</a></li>
+                </ul>
+            </li>
+            <li><a href="http://localhost/perpustakaan/app/admin/laporan"><i class="fa fa-book"></i> <span>Laporan Perpustakaan</span></a></li>
+            <li class="header">LAIN LAIN</li>
+            <li><a href="http://localhost/perpustakaan/app/admin/identitas-app"><i class="fa fa-info"></i> <span>Identitas Applikasi</span></a></li>
+            <li><a href="http://localhost/perpustakaan/app/admin/pesan"><i class="fa fa-envelope"></i> <span>Pesan</span>
+                    <span class="pull-right-container" id="jumlahPesan"></span>
+                </a></li>
+            <li class="header">LANJUTAN</li>
+            <li><a href="http://localhost/perpustakaan/app/admin/dashboard#Logout" data-toggle="modal" data-target="#modalLogoutConfirm"><i class="fa fa-sign-out"></i> <span>Keluar</span></a></li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+
+<div class="modal fade" id="modalLogoutConfirm">
+    <div class="modal-dialog">
+        <div class="modal-content" style="border-radius: 5px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" style="font-family: &#39;Quicksand&#39;, sans-serif; font-weight: bold;">Peringatan</h4>
+            </div>
+            <div class="modal-body">
+                <span>Apa anda yakin ingin keluar dari Applikasi ? <br>
+                    Anda harus login kembali jika ingin masuk Applikasi Perpustakaan</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-danger">Batal</button>
+                <a href="http://localhost/perpustakaan/app/admin/keluar" class="btn btn-primary">Iya, Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var refreshId = setInterval(function() {
+        $('#jumlahPesan').load('./pages/function/Pesan.php?aksi=jumlahPesan');
+    }, 500);
+</script>
+        <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 540px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1 style="font-family: &#39;Quicksand&#39;, sans-serif; font-weight: bold;">
+            Dashboard
+            <small>
+                <script type="text/javascript">
+                    var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                    var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+                    var date = new Date();
+                    var day = date.getDate();
+                    var month = date.getMonth();
+                    var thisDay = date.getDay(),
+                        thisDay = myDays[thisDay];
+                    var yy = date.getYear();
+                    var year = (yy < 1000) ? yy + 1900 : yy;
+                    document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+                    //
+                </script>Rabu, 10 Juli 2024
+            </small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active"><a href="http://localhost/perpustakaan/app/admin/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="alert alert-secondary" style="color: #383d41; background-color: #e2e3e5; border-color: #d6d8db;">
+            Selamat Datang, Administrator di Administrator Perpustakaan LTE CS.
+        </div>
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>2</h3>
+
+                        <p>Anggota</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <a href="http://localhost/perpustakaan/app/admin/anggota" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3>3</h3>
+
+                        <p>Buku</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <a href="http://localhost/perpustakaan/app/admin/data-buku" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        <h3>1</h3>
+
+                        <p>Peminjaman</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-sign-out"></i>
+                    </div>
+                    <a href="http://localhost/perpustakaan/app/admin/data-peminjaman" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+                <!-- small box -->
+                                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3>1</h3>
+
+                        <p>Pengembalian</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-sign-in"></i>
+                    </div>
+                    <a href="http://localhost/perpustakaan/app/admin/data-pengembalian" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <!-- -->
+            
+            <img src="./index1_files/icon-app.png" width="120px" height="120px" style="display: block; margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: -20px;">
+
+            <h2 class="text-center" style="font-family: Quicksand, sans-serif;">Perpustakaan SMAN Pati</h2>
+            <p class="text-center">Alamat : Jl. P. Sudirman No.24, Puri, Plangitan, Kec. Pati, Kabupaten Pati, Jawa Tengah</p>
+
+        </div>
+    </section>
+    <!-- /.content -->
+</div>        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+        <b>Versi</b> 1.1
+    </div>
+    <strong>Hak Cipta © 2024. Sindi Apriantika Sari 202143502673</strong>
+</footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery 3 -->
+    <script src="./index1_files/jquery.min.js.download"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="./index1_files/jquery-ui.min.js.download"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="./index1_files/bootstrap.min.js.download"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="./index1_files/bootstrap3-wysihtml5.all.min.js.download"></script>
+    <!-- Slimscroll -->
+    <script src="./index1_files/jquery.slimscroll.min.js.download"></script>
+    <!-- FastClick -->
+    <script src="./index1_files/fastclick.js.download"></script>
+    <!-- AdminLTE App -->
+    <script src="./index1_files/adminlte.min.js.download"></script>
+    <!-- Toastr -->
+    <script src="./index1_files/toastr.min.js.download"></script>
+    <!-- Lottie -->
+    <script src="./index1_files/lottie-player.js.download"></script>
+    <!-- -->
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('.theme-loader').fadeOut('slow', function() {
+                    $(this).remove();
+                });
+            }, 1500);
+        });
+    </script>
+    <!-- -->
+    <script src="./index1_files/jquery.dataTables.min.js.download"></script>
+    <script src="./index1_files/dataTables.bootstrap.min.js.download"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example1').DataTable();
+            $('#example2').DataTable();
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var url = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+            $('.treeview-menu li').removeClass('active');
+            $('[href$="' + url + '"]').parent().addClass("active");
+            $('.treeview').removeClass('menu-open active');
+            $('[href$="' + url + '"]').closest('li.treeview').addClass("menu-open active");
+        });
+    </script>
+    <script src="./index1_files/bootstrap-datepicker.min.js.download"></script>
+    <script>
+        $(function() {
+            //Date picker
+            $('#datepicker').datepicker({
+                autoclose: true
+            })
+            $('#datepicker1').datepicker({
+                autoclose: true
+            })
+        })
+    </script>
+
+
+</body></html>
